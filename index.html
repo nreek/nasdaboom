@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- <link rel="stylesheet" href="https://landing-pages-smart.s3.amazonaws.com/covid/styles.css"> -->
+    <style>
+    .content-container {
+        max-width: 100vw !important;
+        padding: 0 !important;
+    }
+    </style>
+    <div id="app" class="nasdaboom bg">
+        <div class="row mb-6">
+            <div class="w-full md:w-1/5 py-6">
+                <img src="/images/logo.png" alt="" class="hide-for-mobile-only">
+                <img src="/images/logo-mobile.png" alt="" class="show-for-mobile-only mx-auto" width="178">
+            </div>
+            <div class="flex w-1/2 md:w-1/5 items-center p-3 total-users">
+                <img src="/images/icon-network.png" width="35" class="mr-2" alt="">
+                <div class="flex-1 items-center">
+                    <p class="font-bold">Total Users</p>
+                    <p class="text-2xl md:text-3xl text-gradient d-ib font-bold" data-count="122237">122.237</p>
+                </div>
+            </div>
+            <div class="flex w-1/2 md:w-1/5 items-center p-3 total-donated">
+                <img src="/images/icon-donation.png" width="32" class="mr-2" alt="">
+                <div class="flex-1 items-center">
+                    <p class="font-bold">Total Donated</p>
+                    <p class="text-2xl md:text-3xl text-gradient d-ib font-bold">$ <span data-count="829984"></span></p>
+                </div>
+            </div>
+            <div class="flex w-1/2 md:w-1/5 items-center p-3 your-id">
+                <img src="/images/icon-id.png" width="35" class="mr-2" alt="">
+                <div class="flex-1 items-center">
+                    <p class="font-bold">Your ID</p>
+                    <p class="text-2xl md:text-3xl text-gradient d-ib font-bold">1234</p>
+                </div>
+            </div>
+            <div class="flex w-1/2 md:w-1/5 items-center p-3 your-sponsor">
+                <img src="/images/icon-handshake.png" width="35" class="mr-2" alt="">
+                <div class="flex-1 items-center">
+                    <p class="font-bold">Your Sponsor</p>
+                    <p class="text-2xl md:text-3xl text-gradient d-ib font-bold">9984</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-6 border px-6 rounded-md border-gray-700">
+            <div class="w-full md:w-1/5 py-6 flex flex-col justify-center">
+                <div class="flex items-start">
+                    <img src="/images/logo-nsd.png" width="45" class="mr-3 mt-2" alt="">
+                    <div class="flex-1">
+                        <p class="font-bold">Balance: </p>
+                        <p class="text-2xl font-bold"><span data-count="321234"></span> <small class="font-normal text-sm">NSD</small></p>
+                        <p class="flex items-center text-sm text-secondary">1 NSD = 0.15 USD <img src="/images/icon-arrow-up.png" class="ml-2" width="13" alt=""></p>
+                    </div>
+                </div>
+
+                <a href="#"  class="block btn btn-withdraw mt-3">Withdraw</a>
+            </div>
+            <div class="w-full md:w-3/5 md:m-6 mr-0 md:px-6 md:border-l-2 md:border-r-2 border-gray-400">
+                <div class="flex md:flex-row flex-col items-center">
+                    <div>
+                        <p class="whitespace-no-wrap mb-3">Wallet address:</p>
+                        <img src="/images/qrcode.png" class="bg-white" alt="">
+                    </div>
+                    <div class="flex-1 mt-6">
+                        <input type="text" class="mb-3 w-full mt-3 md:mt-0">
+                        <div class="flex flex-wrap items-center">
+                            <a href="#" class="btn bg-green flex-1 block tall mr-2">Copy Address</a>
+                            <a href="#" class="btn bg-green-dark flex-1 block tall ml-2">Historical</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:flex-1 p-6 you-cicled text-center md:text-left">
+                <p>You cicled:</p>
+                <h1 class="fz-60 mt-3 text-gradient"><span data-count="33"></span>x</h1>
+                <p class="text-silver mt-3">$ <span data-count="3333"></span> USD</p>
+            </div>
+        </div>
+
+        <div class="row mb-6">
+            <div class="w-full md:w-1/2 p-6 mb-6 md:mb-0 md:mr-3 border rounded-md border-gray-700">
+                <span class="mb-3">Your cicle progress:</span>
+                <div class="progress" data-progress="47">
+                    <div class="progress-marker">
+                        <span>47%</span>
+                        <img src="/images/icon-marker.png" width="11" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 p-6 md:mx-3 you-cicled  border rounded-md border-gray-700">
+                <span class="mb-3">Dynamic Compression:</span>
+                <div class="fz-24 text-gradient">$ <span class="text-3xl" data-count="2500"></span></div>
+            </div>
+            <div class="flex-1 p-6 ml-3 residual-bonus  border rounded-md border-gray-700">
+                <span class="mb-3">Residual Bonus:</span>
+                <div class="fz-24 text-gradient">R$ <span class="text-3xl" data-count="1400"></span></div>
+            </div>
+        </div>
+
+        <div class="row mb-6">
+            <div class="p-6 w-full border rounded-md border-gray-700">
+                <div class="flex items-center">
+                    <img src="/images/logo-small.png" width="41" alt="" class="mr-3">
+                    <div class="you-cicled">
+                        <p class="font-bold">NasdaBoom</p>
+                        <h4 class="leading-none text-gradient font-bold"><span data-count="3"></span>x</h4>
+                    </div>
+                </div>
+                <div class="md:p-6 flex-wrap flex">
+                    <div class="nasdaboom-card active">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">1</div>
+                                <span>$ 25</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle active"></div>
+                            <div class="circle active"></div>
+                            <div class="circle active"></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card active">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">2</div>
+                                <span>$ 15</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle active"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">3</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">4</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">5</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">6</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">7</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">8</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">9</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">10</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">11</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="nasdaboom-card">
+                        <div class="nasdaboom-card__wrapper">
+                            <div class="nasdaboom-card__header">
+                                <div class="nasdaboom-card__counter">12</div>
+                                <span>$ 5</span>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle "></div>
+                        </div>
+                        <div class="numbers mt-6">
+                            <span class="flex justify-center items-center mb-3">1782 <img src="/images/icon-network.png" width="21" class="ml-2 opacity-75" alt=""></span>
+                            <span class="flex justify-center items-center mb-3">661 <img src="/images/icon-reload.png" width="17" class="ml-2 opacity-75" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row uppercase justify-center px-6">
+                <div class="my-6 flex items-center justify-center w-full md:w-1/2">
+                    <strong class="text-secondary mr-3">nsd</strong> THE COST OF SLOTS IN NSD (NASDACOIN)
+                </div>
+                <div class="mb-6 md:my-6 flex items-center justify-center w-1/2 md:w-1/4">
+                    <img src="/images/icon-reload.png" width="17" class="mr-2 opacity-75" alt=""> Number of reinvests
+                </div>
+                <div class="mb-6 md:my-6 flex items-center justify-center w-1/2 md:w-1/4">
+                    <img src="/images/icon-network.png" width="17" class="mr-2 opacity-75" alt=""> Partners on the slot
+                </div>
+            </div>
+        </div>
+
+
+        
+        <script src="./js/countUp.min.js" type="module"></script>
+        <script src="./js/main.js" type="module"></script>
+
+        <script>
+            var progresses = document.querySelectorAll('[data-progress]')
+
+            progresses.forEach(progress => {
+                let marker = progress.querySelector('.progress-marker');
+                marker.style.left = progress.attributes['data-progress'].value + '%'
+            })
+        </script>
+    </div>
