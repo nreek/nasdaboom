@@ -17,33 +17,40 @@
     }
     </style>
     <div id="app" class="nasdaboom bg">
-        <div class="row mb-6">
-            <div class="w-full md:w-1/5 py-6">
+        <div class="row mb-6 justify-center">
+            <div class="w-full md:w-1/6 py-6">
                 <img src="/images/logo.png" alt="" class="hide-for-mobile-only">
                 <img src="/images/logo-mobile.png" alt="" class="show-for-mobile-only mx-auto" width="178">
             </div>
-            <div class="flex w-1/2 md:w-1/5 items-center p-3 total-users">
+            <div class="flex w-1/2 md:w-1/6 items-center p-3 total-donated">
+                <img src="/images/logo-nsd-white.png" width="35" class="mr-2" alt="">
+                <div class="flex-1 items-center">
+                    <p class="font-bold">Total NSD</p>
+                    <p class="text-2xl md:text-3xl text-gradient d-ib font-bold" data-count="122237">122.237</p>
+                </div>
+            </div>
+            <div class="flex w-1/2 md:w-1/6 items-center p-3 total-users">
                 <img src="/images/icon-network.png" width="35" class="mr-2" alt="">
                 <div class="flex-1 items-center">
                     <p class="font-bold">Total Users</p>
                     <p class="text-2xl md:text-3xl text-gradient d-ib font-bold" data-count="122237">122.237</p>
                 </div>
             </div>
-            <div class="flex w-1/2 md:w-1/5 items-center p-3 total-donated">
+            <div class="flex w-1/2 md:w-1/6 items-center p-3 total-donated">
                 <img src="/images/icon-donation.png" width="32" class="mr-2" alt="">
                 <div class="flex-1 items-center">
                     <p class="font-bold">Total Donated</p>
                     <p class="text-2xl md:text-3xl text-gradient d-ib font-bold">$ <span data-count="829984"></span></p>
                 </div>
             </div>
-            <div class="flex w-1/2 md:w-1/5 items-center p-3 your-id">
+            <div class="flex w-1/2 md:w-1/6 items-center p-3 your-id">
                 <img src="/images/icon-id.png" width="35" class="mr-2" alt="">
                 <div class="flex-1 items-center">
                     <p class="font-bold">Your ID</p>
                     <p class="text-2xl md:text-3xl text-gradient d-ib font-bold">1234</p>
                 </div>
             </div>
-            <div class="flex w-1/2 md:w-1/5 items-center p-3 your-sponsor">
+            <div class="flex w-1/2 md:w-1/6 items-center p-3 your-sponsor">
                 <img src="/images/icon-handshake.png" width="35" class="mr-2" alt="">
                 <div class="flex-1 items-center">
                     <p class="font-bold">Your Sponsor</p>
@@ -59,23 +66,26 @@
                     <div class="flex-1">
                         <p class="font-bold">Balance: </p>
                         <p class="text-2xl font-bold"><span data-count="321234"></span> <small class="font-normal text-sm">NSD</small></p>
-                        <p class="flex items-center text-sm text-secondary">1 NSD = 0.15 USD <img src="/images/icon-arrow-up.png" class="ml-2" width="13" alt=""></p>
                     </div>
                 </div>
-
-                <a href="#"  class="block btn btn-withdraw mt-3">Withdraw</a>
+                <div class="flex items-start">
+                    <img src="/images/icon-receipt.png" width="30" class="ml-4 mr-3 mt-2" alt="">
+                    <div class="flex-1">
+                        <p class="flex items-center text-sm text-secondary mt-3">1 NSD = 0.15 USD <img src="/images/icon-arrow-up.png" class="ml-2" width="13" alt=""></p>
+                    </div>
+                </div>
             </div>
             <div class="w-full md:w-3/5 md:m-6 mr-0 md:px-6 md:border-l-2 md:border-r-2 border-gray-400">
                 <div class="flex md:flex-row flex-col items-center">
                     <div>
-                        <p class="whitespace-no-wrap mb-3">Wallet address:</p>
-                        <img src="/images/qrcode.png" class="bg-white" alt="">
+                        <p class="whitespace-no-wrap mb-3">Withdraw:</p>
+                        <img src="/images/icon-withdraw.svg" class="mr-4" width="75" alt="">
                     </div>
                     <div class="flex-1 mt-6">
-                        <input type="text" class="mb-3 w-full mt-3 md:mt-0">
+                        <input type="text" class="mb-3 w-full mt-3 md:mt-0" value="NS3242DFAdfewe53r3f3rgsaw23rADFAFQ3">
                         <div class="flex flex-wrap items-center">
-                            <a href="#" class="btn bg-green flex-1 block tall mr-2">Copy Address</a>
-                            <a href="#" class="btn bg-green-dark flex-1 block tall ml-2">Historical</a>
+                            <input type="text" class="flex-1 block tall md:mr-2" value="1342.34543">
+                            <a href="#" class="btn btn-withdraw flex-1 block tall mt-3 md:ml-2 md:mt-0">Withdraw</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +98,7 @@
         </div>
 
         <div class="row mb-6">
-            <div class="w-full md:w-1/2 p-6 mb-6 md:mb-0 md:mr-3 border rounded-md border-gray-700">
+            <div class="w-full md:flex-1 p-6 mb-6 md:mb-0 md:mr-3 border rounded-md border-gray-700">
                 <span class="mb-3">Your cicle progress:</span>
                 <div class="progress" data-progress="47">
                     <div class="progress-marker">
@@ -97,25 +107,37 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-1 p-6 md:mx-3 you-cicled  border rounded-md border-gray-700">
-                <span class="mb-3">Dynamic Compression:</span>
-                <div class="fz-24 text-gradient">$ <span class="text-3xl" data-count="2500"></span></div>
-            </div>
-            <div class="flex-1 p-6 ml-3 residual-bonus  border rounded-md border-gray-700">
+            <div class="w-full md:w-1/4 p-6 ml-3 residual-bonus  border rounded-md border-gray-700">
+                <img src="/images/icon-network.png" width="40" class="float-left mr-4" alt="">
                 <span class="mb-3">Residual Bonus:</span>
-                <div class="fz-24 text-gradient">R$ <span class="text-3xl" data-count="1400"></span></div>
+                <div class="fz-24 text-gradient">R$ <span class="text-3xl font-bold" data-count="1400"></span></div>
             </div>
         </div>
 
         <div class="row mb-6">
             <div class="p-6 w-full border rounded-md border-gray-700">
-                <div class="flex items-center">
-                    <img src="/images/logo-small.png" width="41" alt="" class="mr-3">
-                    <div class="you-cicled">
-                        <p class="font-bold">NasdaBoom</p>
-                        <h4 class="leading-none text-gradient font-bold"><span data-count="3"></span>x</h4>
+                <div class="flex justify-between flex-col md:flex-row">
+                    <div class="flex items-center">
+                        <img src="/images/logo-small.png" width="41" alt="" class="mr-3">
+                        <div class="you-cicled">
+                            <p class="font-bold">NasdaBoom</p>
+                            <h4 class="leading-none text-gradient font-bold"><span data-count="3"></span>x</h4>
+                        </div>
+                    </div>
+    
+                    <div class="w-full md:flex-1 flex items-center justify-center my-6 md:my-0 md:px-10">
+                        <img src="/images/icon-alert.svg" width="45" alt="" class="mr-4">
+
+                        <p class="font-bold">Você perdeu um pagamento de $300 no slot 3 </p>
+
+                    </div>
+
+                    <div class=" md:mx-3 you-cicled">
+                        <span class="mb-3">Dynamic Compression:</span>
+                        <div class="fz-24 text-gradient">$ <span class="text-3xl font-bold" data-count="2500"></span></div>
                     </div>
                 </div>
+
                 <div class="md:p-6 flex-wrap flex">
                     <div class="nasdaboom-card active">
                         <div class="nasdaboom-card__wrapper">
@@ -345,6 +367,81 @@
                 </div>
                 <div class="mb-6 md:my-6 flex items-center justify-center w-1/2 md:w-1/4">
                     <img src="/images/icon-network.png" width="17" class="mr-2 opacity-75" alt=""> Partners on the slot
+                </div>
+            </div>
+
+            <div class="row my-6 table-levels">
+                <div class="flex-1 bg-purple active px-6 py-3 mr-3">Level 1</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 2</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 3</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 4</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 5</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 6</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 7</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 8</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 9</div>
+                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 10</div>
+            </div>
+
+            <div class="row">
+                <div class="table-responsive row">
+                    <table class="w-full mb-12">
+                        <thead style="border-bottom: 3px solid #5f0668;">
+                            <tr>
+                                <th class="bg-purple active">
+                                    <small class="uppercase">Total</small>
+                                    <h3 class="leading-none font-bold">5641.2324</h3>
+                                </th>
+                                <th>ID</th>
+                                <th>Cycle</th>
+                                <th>Sponsor</th>
+                                <th style="min-width: 140px;">Gain</th>
+                                <th>Downlines</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-right">#1</td>
+                                <td>33453</td>
+                                <td>341</td>
+                                <td>13436</td>
+                                <td>$ 39,012.94</td>
+                                <td>878</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">#2</td>
+                                <td>33453</td>
+                                <td>341</td>
+                                <td>13436</td>
+                                <td>$ 39,012.94</td>
+                                <td>878</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">#3</td>
+                                <td>33453</td>
+                                <td>341</td>
+                                <td>13436</td>
+                                <td>$ 39,012.94</td>
+                                <td>878</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">#4</td>
+                                <td>33453</td>
+                                <td>341</td>
+                                <td>13436</td>
+                                <td>$ 39,012.94</td>
+                                <td>878</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">#5</td>
+                                <td>33453</td>
+                                <td>341</td>
+                                <td>13436</td>
+                                <td>$ 39,012.94</td>
+                                <td>878</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

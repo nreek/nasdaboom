@@ -127,6 +127,14 @@
   background: #240C39 !important;
 }
 
+.nasdaboom .bg-purple {
+  background: #5f0669 !important;
+}
+
+.nasdaboom .bg-purple.active {
+  background: #350059 !important;
+}
+
 .nasdaboom.bg, .nasdaboom .bg {
   background: #1D072E !important;
 }
@@ -380,5 +388,40 @@
 .nasdaboom .nasdaboom-card .circles .circle.active:nth-child(3) {
   background: -webkit-gradient(linear, left bottom, left top, from(#FAD961), to(#F76B1C));
   background: linear-gradient(to top, #FAD961, #F76B1C);
+}
+
+.nasdaboom .table-responsive {
+  min-width: 1160px;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .nasdaboom .table-responsive {
+    min-width: unset;
+    overflow-x: auto;
+    max-width: calc(100vw - 20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .nasdaboom .table-levels {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .nasdaboom .table-levels > div {
+    white-space: nowrap;
+  }
+}
+
+.nasdaboom table {
+  text-align: left;
+}
+
+.nasdaboom table th, .nasdaboom table td {
+  padding: 13px 20px;
 }
 /*# sourceMappingURL=styles.css.map */

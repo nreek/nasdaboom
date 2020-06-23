@@ -7,6 +7,8 @@
     $c_primary : #240C39;
     $c_secondary : #3F1762;
     $c_green : #00C595;
+    $c_purple : #5f0669;
+    $c_purple_active : #350059;
     $c_green_dark: #11595A;
 
     color: white;
@@ -53,6 +55,13 @@
 
     .bg-white { background: white !important; }
     .bg-primary { background: $c_primary !important; }
+    .bg-purple { 
+        background: $c_purple !important; 
+
+        &.active {
+            background: $c_purple_active !important; 
+        }
+    }
     &.bg, .bg { background: $c_bg !important; }
     .bg-green { background: $c_green !important; }
     .bg-green-dark { background: $c_green_dark !important; }
@@ -226,6 +235,38 @@
                     &:nth-child(3) { background: linear-gradient(to top, #FAD961, #F76B1C); }
                 }
             }
+        }
+    }
+
+    .table-responsive {
+        min-width: 1160px; 
+        max-width: 100%;
+
+        @include mobile {
+            min-width: unset;
+            overflow-x: auto;
+            max-width: calc(100vw - 20px);
+        }
+
+    }
+
+    .table-levels {
+        @include mobile {
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+            > div {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    table {
+        text-align: left;
+
+        th, td {
+            padding: 13px 20px;
         }
     }
 }
