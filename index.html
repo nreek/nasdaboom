@@ -101,6 +101,7 @@
             <div class="w-full md:flex-1 p-6 mb-6 md:mb-0 md:mr-3 border rounded-md border-gray-700">
                 <span class="mb-3">Your cicle progress:</span>
                 <div class="progress" data-progress="47">
+                    <div class="goal">1,000,000</div>
                     <div class="progress-marker">
                         <span>47%</span>
                         <img src="/images/icon-marker.png" width="11" alt="">
@@ -371,16 +372,16 @@
             </div>
 
             <div class="row my-6 table-levels">
-                <div class="flex-1 bg-purple active px-6 py-3 mr-3">Level 1</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 2</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 3</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 4</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 5</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 6</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 7</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 8</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 9</div>
-                <div class="flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 10</div>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple active px-6 py-3 mr-3">Level 1</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 2</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 3</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 4</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 5</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 6</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 7</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 8</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 9</a>
+                <a href="javascript:void(0);" onclick="setTableLevel(this)" class="table-level flex-1 bg-purple whitespace-no-wrap px-6 py-3 mr-3">Level 10</a>
             </div>
 
             <div class="row">
@@ -458,5 +459,14 @@
                 let marker = progress.querySelector('.progress-marker');
                 marker.style.left = progress.attributes['data-progress'].value + '%'
             })
+
+            function setTableLevel(el) {
+                var levels = document.querySelectorAll('.table-level')
+                levels.forEach(level => {
+                    level.classList.remove('active')
+                })
+
+                el.classList.add('active')
+            }
         </script>
     </div>

@@ -131,6 +131,11 @@
         height: 15px;
         margin-top: 20px;
 
+        .goal {
+            float: right;
+            margin-top: -30px;
+        }
+
         &-marker {
             position: absolute;
             bottom: 0;
@@ -251,12 +256,14 @@
     }
 
     .table-levels {
+
+        .table-level { transition: all .6s; }
         @include mobile {
             align-items: center;
             flex-wrap: nowrap;
             overflow-x: auto;
 
-            > div {
+            > .table-level {
                 white-space: nowrap;
             }
         }

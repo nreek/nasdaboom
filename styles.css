@@ -244,6 +244,11 @@
   margin-top: 20px;
 }
 
+.nasdaboom .progress .goal {
+  float: right;
+  margin-top: -30px;
+}
+
 .nasdaboom .progress-marker {
   position: absolute;
   bottom: 0;
@@ -403,6 +408,11 @@
   }
 }
 
+.nasdaboom .table-levels .table-level {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
 @media (max-width: 767px) {
   .nasdaboom .table-levels {
     -webkit-box-align: center;
@@ -412,7 +422,7 @@
         flex-wrap: nowrap;
     overflow-x: auto;
   }
-  .nasdaboom .table-levels > div {
+  .nasdaboom .table-levels > .table-level {
     white-space: nowrap;
   }
 }
