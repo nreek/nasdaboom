@@ -308,6 +308,10 @@
             overflow-y: auto;
             margin: 0 auto;
             scroll-behavior: smooth;
+
+            @include mobile {
+                width: calc(100% - 80px);
+            }
         }
 
         .carousel-card {

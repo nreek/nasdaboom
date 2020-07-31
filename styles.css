@@ -475,6 +475,12 @@
   scroll-behavior: smooth;
 }
 
+@media (max-width: 767px) {
+  .nasdaboom .carousel .carousel-cards {
+    width: calc(100% - 80px);
+  }
+}
+
 .nasdaboom .carousel .carousel-card {
   border-radius: 10px;
   padding: 7px 12px;
