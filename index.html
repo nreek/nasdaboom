@@ -72,6 +72,9 @@
                     <img src="/images/icon-receipt.png" width="30" class="ml-4 mr-3 mt-2" alt="">
                     <div class="flex-1">
                         <p class="flex items-center text-sm text-secondary mt-3">1 NSD = 0.15 USD <img src="/images/icon-arrow-up.png" class="ml-2" width="13" alt=""></p>
+                        <p class="mt-2">
+                            <a href="#"><small class="text-orange">All the transactions</small></a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -81,10 +84,15 @@
                         <p class="whitespace-no-wrap mb-3">Withdraw:</p>
                         <img src="/images/icon-withdraw.svg" class="mr-4" width="75" alt="">
                     </div>
-                    <div class="flex-1 mt-6">
-                        <input type="text" class="mb-3 w-full mt-3 md:mt-0" value="NS3242DFAdfewe53r3f3rgsaw23rADFAFQ3">
-                        <div class="flex flex-wrap items-center">
-                            <input type="text" class="flex-1 block tall md:mr-2" value="1342.34543">
+                    <div class="flex-1 flex mt-6 flex-wrap">
+                        <div class="w-full md:w-1/2 pr-3">
+                            <input type="text" class="mb-3 w-full mt-3 md:mt-0" placeholder="Adress" value="NS3242DFAdfewe53r3f3rgsaw23rADFAFQ3">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <input type="password" class="mb-3 w-full mt-3 md:mt-0" placeholder="PIN" value="">
+                        </div>
+                        <div class="w-full flex flex-wrap items-center">
+                            <input type="text" class="flex-1 block tall md:mr-3" value="1342.34543" placeholder="Amount">
                             <a href="#" class="btn btn-withdraw flex-1 block tall mt-3 md:ml-2 md:mt-0">Withdraw</a>
                         </div>
                     </div>
@@ -98,33 +106,132 @@
         </div>
 
         <div class="row mb-6">
-            <div class="w-full md:flex-1 p-6 mb-6 md:mb-0 md:mr-3 border rounded-md border-gray-700">
-                <span class="mb-3">Your cicle progress:</span>
+            <div class="carousel-cell p-6 mb-6 md:mb-0 md:mr-3 border rounded-md border-gray-700">
+
+                <script>
+                    function carouselNext() {
+                        let $carousel = document.querySelector('#carousel')
+                        let carouselCardWidth = document.querySelector('#carousel .carousel-card').offsetWidth + 15;
+
+                        $carousel.scrollLeft += carouselCardWidth
+                    }
+
+                    function carouselPrev() {
+                        let $carousel = document.querySelector('#carousel')
+                        let carouselCardWidth = document.querySelector('#carousel .carousel-card').offsetWidth + 15;
+
+                        $carousel.scrollLeft -= carouselCardWidth
+                    }
+                </script>
+                <div class="carousel">
+                    <img onclick="carouselPrev()" class="arrow left" src="/images/chevron.svg" alt="">
+                    <img onclick="carouselNext()" class="arrow" src="/images/chevron.svg" alt="">
+                    <div class="carousel-cards" id="carousel">
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">1</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">1</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">2</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">3</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">4</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">5</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">6</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card__wrapper">
+                            <div class="carousel-card">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-orange font-bold">7</span>
+                                    <span>1297.5903</span>
+                                </div>
+                                <div class="opacity-75 text-center"> Last Pay: 1.456 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <span class="mb-3">Your cicle progress:</span>
                 <div class="progress" data-progress="47">
                     <div class="goal">1,000,000</div>
                     <div class="progress-marker">
                         <span>47%</span>
                         <img src="/images/icon-marker.png" width="11" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="w-full md:w-1/4 p-6 ml-3 residual-bonus  border rounded-md border-gray-700">
-                <img src="/images/icon-network.png" width="40" class="float-left mr-4" alt="">
-                <span class="mb-3">Residual Bonus:</span>
-                <div class="fz-24 text-gradient">R$ <span class="text-3xl font-bold" data-count="1400"></span></div>
+            <div class="w-full md:w-1/4 p-6 ml-3 residual-bonus  border rounded-md border-gray-700 flex items-center">
+                <div class="flex items-center">
+                    <img src="/images/logo-small.png" width="41" alt="" class="mr-3">
+                    <div class="you-cicled">
+                        <p class="font-bold">Bonus Boom</p>
+                        <h4 class="leading-none text-gradient font-bold"><span data-count="3"></span>x</h4>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="row mb-6">
             <div class="p-6 w-full border rounded-md border-gray-700">
                 <div class="flex justify-between flex-col md:flex-row">
-                    <div class="flex items-center">
-                        <img src="/images/logo-small.png" width="41" alt="" class="mr-3">
-                        <div class="you-cicled">
-                            <p class="font-bold">NasdaBoom</p>
-                            <h4 class="leading-none text-gradient font-bold"><span data-count="3"></span>x</h4>
+                    <div class="flex items-center residual-bonus">
+                        <img src="/images/icon-network.png" width="40" class="float-left mr-4" alt="">
+                        <div>
+                            <span class="mb-3">Residual Bonus:</span>
+                            <div class="fz-24 text-gradient">R$ <span class="text-3xl font-bold" data-count="1400"></span></div>
                         </div>
                     </div>
+
     
                     <div class="w-full md:flex-1 flex items-center justify-center my-6 md:my-0 md:px-10">
                         <img src="/images/icon-alert.svg" width="45" alt="" class="mr-4">
@@ -141,6 +248,14 @@
 
                 <div class="md:p-6 flex-wrap flex">
                     <div class="nasdaboom-card active">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-red-500 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-green-500 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-red-500 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-green-500 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">1</div>
@@ -148,8 +263,12 @@
                             </div>
                         </div>
                         <div class="circles">
-                            <div class="circle active"></div>
-                            <div class="circle active"></div>
+                            <div class="circle active p-1 flex items-center justify-center">
+                                <img src="/images/user.svg" alt="">
+                            </div>
+                            <div class="circle active p-1 flex items-center justify-center">
+                                <img src="/images/reload.svg" alt="">
+                            </div>
                             <div class="circle active"></div>
                         </div>
                         <div class="numbers mt-6">
@@ -159,6 +278,14 @@
                     </div>
 
                     <div class="nasdaboom-card active">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-red-500 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-green-500 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">2</div>
@@ -177,6 +304,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">3</div>
@@ -195,6 +330,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">4</div>
@@ -213,6 +356,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">5</div>
@@ -231,6 +382,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">6</div>
@@ -249,6 +408,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">7</div>
@@ -267,6 +434,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">8</div>
@@ -285,6 +460,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">9</div>
@@ -303,6 +486,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">10</div>
@@ -321,6 +512,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">11</div>
@@ -339,6 +538,14 @@
                     </div>
 
                     <div class="nasdaboom-card">
+                        <div class="flex justify-center">
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">5x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">
+                                <img src="/images/icon-reload.png" width="10" alt="">
+                            </span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1">10x</span>
+                            <span class="badge rounded-md border-gray-500 opacity-50 mb-1 text-xs flex items-center justify-center mr-1"> > </span>
+                        </div>
                         <div class="nasdaboom-card__wrapper">
                             <div class="nasdaboom-card__header">
                                 <div class="nasdaboom-card__counter">12</div>

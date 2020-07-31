@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>.cls-1{fill:none;stroke:url(#gradient1);stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+        <linearGradient id="gradient1"  x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop id="stop1" offset="0%" stop-color="#FAD961" />
+            <stop id="stop2" offset="100%" stop-color="#F76B1C"/>
+        </linearGradient>
+    </defs>
+    <title/>
+    <g id="chevron-right"><line class="cls-1" x1="21" x2="12" y1="16" y2="25"/><line class="cls-1" x1="12" x2="21" y1="7" y2="16"/></g>
+</svg>
